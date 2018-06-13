@@ -1,0 +1,66 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"startupProgram",
+		"component_path":	"spaContainer/startupProgram/",
+		"component_uniquename":	"startupProgram_startupProgram"
+	},
+	"coordinates":	{
+		"width":	909,
+		"height":	722
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	null,
+			"props":	{
+				"id":	"pbCallProgram1",
+				"tab_order":	0,
+				"format":	"CallProgram1"
+			},
+			"coordinates":	{
+				"x":	51,
+				"y":	83,
+				"width":	108,
+				"height":	27
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"pbCallProgram2",
+				"tab_order":	0,
+				"format":	"CallProgram2"
+			},
+			"coordinates":	{
+				"x":	51,
+				"y":	116,
+				"width":	108,
+				"height":	27
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"MainCanvas",
+				"tab_order":	0
+			},
+			"coordinates":	{
+				"x":	367,
+				"y":	212,
+				"width":	192,
+				"height":	192
+			},
+			"hint":	null,
+			"controlType":	"F",
+			"children":	null
+		}
+	]
+}

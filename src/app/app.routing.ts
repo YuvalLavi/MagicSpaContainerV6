@@ -8,11 +8,25 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import {MagicRouterContainer} from '@magic-xpa/angular';
 
 export const routes: Routes = [
   {
+    path: 'dashboard',
+    //component: DashboardComponent,
+    loadChildren: './views/dashboard/dashboard.module#DashboardModule',
+  },
+  {
+    path: 'RoutA',
+    component: MagicRouterContainer,
+  },
+  {
+    path: 'RoutB',
+    component: MagicRouterContainer,
+  },
+  {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'RoutA',
     pathMatch: 'full',
   },
   {
@@ -43,14 +57,19 @@ export const routes: Routes = [
       title: 'Register Page'
     }
   },
-  {
-    path: '',
-    component: DefaultLayoutComponent,
+  /*{
+    path: 'aa',
+    component: MagicRouterContainer,
+     //component: DefaultLayoutComponent,
     data: {
       title: 'Home'
     },
     children: [
       {
+        path: 'dashboard',
+        loadChildren: './views/dashboard/dashboard.module#DashboardModule'
+      },
+      /!*{
         path: 'base',
         loadChildren: './views/base/base.module#BaseModule'
       },
@@ -62,10 +81,7 @@ export const routes: Routes = [
         path: 'charts',
         loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
       },
-      {
-        path: 'dashboard',
-        loadChildren: './views/dashboard/dashboard.module#DashboardModule'
-      },
+
       {
         path: 'icons',
         loadChildren: './views/icons/icons.module#IconsModule'
@@ -81,9 +97,9 @@ export const routes: Routes = [
       {
         path: 'widgets',
         loadChildren: './views/widgets/widgets.module#WidgetsModule'
-      }
+      }*!/
     ]
-  }
+  }*/
 ];
 
 @NgModule({

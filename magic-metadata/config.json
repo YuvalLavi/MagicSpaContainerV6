@@ -4,18 +4,15 @@
 	"created_menu":	false,
 	"created_views":	true,
 	"theme":	"material",
-	"output_folder":	"D:\\magicxpaproject\\_Trunk\\Sources\\Projects\\routing\\output",
+	"output_folder":	"D:\\OneDrive\\MagicProjects\\Magic4\\MagicSPAcontainer\\Angular",
 	"absolute_position":	false,
 	"backup_current":	true,
-	"source_images_folder":	"D:\\magicxpaproject\\_Trunk\\Sources\\Projects\\routing\\images",
+	"source_images_folder":	"D:\\OneDrive\\MagicProjects\\Magic4\\MagicSPAcontainer\\images",
 	"copy_images":	false,
 	"exposed_functionality":	true,
 	"allow_testing":	false,
-	"project_name":	"routing",
+	"project_name":	"MagicSPAcontainer",
 	"form_files":	[
-		"Root/Root",
-		"A/A",
-		"A/SubA1/SubA1",
-		"B/B"
+		"spaContainer/startupProgram/startupProgram"
 	]
 }

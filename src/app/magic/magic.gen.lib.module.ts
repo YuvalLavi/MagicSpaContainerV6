@@ -1,3 +1,4 @@
+/*
 import { NgModule }             from '@angular/core';
 import { RouterModule }         from '@angular/router';
 import { ReactiveFormsModule }  from '@angular/forms';
@@ -26,6 +27,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { ComponentListService, MagicModule } from "@magic-xpa/angular";
 import {magicGenComponents, magicGenCmpsHash, title} from './component-list.g';
+
 
 
 @NgModule({
@@ -72,3 +74,4 @@ export class MagicGenLibModule {
     componentList.title = title;
   }
 }
+*/

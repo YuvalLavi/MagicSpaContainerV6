@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+// import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   // tslint:disable-next-line
   selector: 'body',
-  template: '<router-outlet></router-outlet>'
+  // template: '<router-outlet></router-outlet>'
+  template: '<magic-root></magic-root>'
 })
+export class AppComponent {
+  title = 'app';
+}
+
+/*
 export class AppComponent implements OnInit {
   constructor(private router: Router) { }
 
@@ -18,3 +24,4 @@ export class AppComponent implements OnInit {
     });
   }
 }
+*/

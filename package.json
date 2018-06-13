@@ -19,8 +19,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "start-noSorceMap": "ng serve --sourceMap false",
+    "start": "ng serve --sourceMap false",
+    "start-noSorceMap": "ng serve --port 4201 --sourceMap false",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",

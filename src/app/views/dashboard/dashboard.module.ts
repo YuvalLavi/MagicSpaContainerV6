@@ -5,13 +5,13 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 import { DashboardComponent } from './dashboard.component';
-import { DashboardRoutingModule } from './dashboard-routing.module';
+//import { DashboardRoutingModule } from './dashboard-routing.module';
 import {MagicModule} from '@magic-xpa/angular';
 
 @NgModule({
   imports: [
     FormsModule,
-    DashboardRoutingModule,
+  /*  DashboardRoutingModule,*/
     ChartsModule,
     BsDropdownModule,
     MagicModule,

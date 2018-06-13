@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
+import { CommonModule }         from "@angular/common";
+
+
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
@@ -39,19 +42,44 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
-import {MagicModule} from '@magic-xpa/angular';
-import {MagicGenLibModule} from './magic/magic.gen.lib.module';
 import {routes} from './app.routes';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
+import {DashboardComponent} from './views/dashboard/dashboard.component';
+
+
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatListModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatTableModule,
+  MatTabsModule,
+  MatTooltipModule
+} from "@angular/material";
+
+import { DynamicModule } from 'ng-dynamic-component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
+import { ComponentListService, MagicModule } from "@magic-xpa/angular";
+import {magicGenComponents, magicGenCmpsHash, title} from './magic/component-list.g';
+//import {DashboardModule} from './views/dashboard/dashboard.module';
+
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-
 
     // Magic Modules
 
@@ -66,7 +94,32 @@ import {RouterModule} from '@angular/router';
     TabsModule.forRoot(),
     ChartsModule,
      MagicModule.forRoot(),
-    MagicGenLibModule
+    //MagicGenLibModule,
+    CommonModule,
+    ReactiveFormsModule,
+    RouterModule,
+
+    // Magic Modules
+    MagicModule,
+    DynamicModule.withComponents(magicGenComponents),
+    InfiniteScrollModule,
+
+    // Material Modules
+    MatTableModule,
+    MatPaginatorModule,
+    MatInputModule,
+    MatButtonModule,
+    MatListModule,
+    MatCheckboxModule,
+    MatTabsModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatTooltipModule,
+    MatCardModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule
   ],
   declarations: [
     AppComponent,
@@ -74,7 +127,8 @@ import {RouterModule} from '@angular/router';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ...magicGenComponents
   ],
   providers: [{
     provide: LocationStrategy,
@@ -82,4 +136,10 @@ import {RouterModule} from '@angular/router';
   }],
   bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(componentList: ComponentListService) {
+    componentList.addComponents(magicGenCmpsHash);
+    componentList.title = title;
+
+  }
+}

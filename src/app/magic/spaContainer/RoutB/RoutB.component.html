@@ -1,0 +1,37 @@
+<form
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        magic="RoutB"
+        class="RoutBProps"
+    >
+        <div style="display: flex; flex-direction: row">
+            <label
+                magic="Label2"
+                class="Label2Props mgFont1"
+            >
+                vRoutB</label>
+                <mat-form-field class="vRoutBProps">
+                    <div>
+                        <input
+                            matInput
+                            magic="vRoutB"
+                            formControlName="vRoutB"
+                            pattern="^.{0,2}$"
+                        >
+                            <div *ngIf="(screenFormGroup.get('vRoutB').dirty) && (
+screenFormGroup.get('vRoutB').hasError('pattern')
+)">
+                                <p>{{ showErrMsg('vRoutB') }}</p>
+                            </div>
+                    </div>
+                    <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+--></mat-form-field>
+        </div>
+        </div>
+        </form>

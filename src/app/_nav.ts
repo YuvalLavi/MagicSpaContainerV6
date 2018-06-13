@@ -8,22 +8,23 @@ export const navItems = [
       text: 'NEW'
     }
   }
-  /*,
+  ,
   {
     title: true,
     name: 'Theme'
   },
   {
-    name: 'Colors',
-    url: '/theme/colors',
+    name: 'Rout to A',
+    url: '/RoutA',
+    // url: '/theme/colors',
     icon: 'icon-drop'
   },
   {
-    name: 'Typography',
-    url: '/theme/typography',
+    name: 'Rout to B',
+    url: '/RoutB',
     icon: 'icon-pencil'
   },
-  {
+  /*{
     title: true,
     name: 'Components'
   },
