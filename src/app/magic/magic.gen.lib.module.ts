@@ -1,3 +1,4 @@
+//NOT in use, was moved to app.module!!!
 /*
 import { NgModule }             from '@angular/core';
 import { RouterModule }         from '@angular/router';
