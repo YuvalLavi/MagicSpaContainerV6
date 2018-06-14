@@ -72,6 +72,9 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ComponentListService, MagicModule } from "@magic-xpa/angular";
 import {magicGenComponents, magicGenCmpsHash, title} from './magic/component-list.g';
 //import {DashboardModule} from './views/dashboard/dashboard.module';
+import { FormsModule } from '@angular/forms';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+
 
 
 @NgModule({
@@ -81,6 +84,11 @@ import {magicGenComponents, magicGenCmpsHash, title} from './magic/component-lis
     ReactiveFormsModule,
 
     // Magic Modules
+    FormsModule,
+    ChartsModule,
+    BsDropdownModule,
+    MagicModule,
+    ButtonsModule.forRoot(),
 
     AppRoutingModule,
     AppAsideModule,
