@@ -17,14 +17,23 @@ export const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     //loadChildren: './views/dashboard/dashboard.module#DashboardModule',
+    data: {
+      title: 'Dashboard'
+    }
   },
   {
     path: 'RoutA',
     component: MagicRouterContainer,
+    data: {
+      title: 'Rout A'
+    }
   },
   {
     path: 'RoutB',
     component: MagicRouterContainer,
+    data: {
+      title: 'Rout B'
+    }
   },
   {
     path: '',
