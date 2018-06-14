@@ -189,7 +189,7 @@ export const navItems = [
   {
     title: true,
     name: 'Extras',
-  },
+  },*/
   {
     name: 'Pages',
     url: '/pages',
@@ -216,7 +216,7 @@ export const navItems = [
         icon: 'icon-star'
       }
     ]
-  },*/
+  },
   {
     name: 'Download CoreUI',
     url: 'http://coreui.io/angular/',
