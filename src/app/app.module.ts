@@ -128,6 +128,7 @@ import {magicGenComponents, magicGenCmpsHash, title} from './magic/component-lis
     P500Component,
     LoginComponent,
     RegisterComponent,
+    DashboardComponent,
     ...magicGenComponents
   ],
   providers: [{
