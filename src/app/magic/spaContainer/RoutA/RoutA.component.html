@@ -1,37 +1,34 @@
 <form
-    novalidate
-    [formGroup]="screenFormGroup"
+  novalidate
+  [formGroup]="screenFormGroup"
 >
-    <div
-        style="display: flex; flex-direction: column"
-        magic="RoutA"
-        class="RoutAProps"
+  <div
+    magic="RoutA"
+  >
+    <label
+      magic="Label2"
     >
-        <div style="display: flex; flex-direction: row">
-            <label
-                magic="Label2"
-                class="Label2Props mgFont1"
-            >
-                vRoutA</label>
-                <mat-form-field class="vRoutAProps">
-                    <div>
-                        <input
-                            matInput
-                            magic="vRoutA"
-                            formControlName="vRoutA"
-                            pattern="^.{0,2}$"
-                        >
-                            <div *ngIf="(screenFormGroup.get('vRoutA').dirty) && (
-screenFormGroup.get('vRoutA').hasError('pattern')
-)">
-                                <p>{{ showErrMsg('vRoutA') }}</p>
-                            </div>
-                    </div>
-                    <!--
-<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-<mat-icon>close</mat-icon>
-</button>
---></mat-form-field>
+      RoutA</label>
+      <div>
+        <input
+          magic="vRoutA"
+          formControlName="vRoutA"
+          pattern="^.{0,20}$"
+        >
+        <div *ngIf="(screenFormGroup.get('vRoutA').dirty) && (screenFormGroup.get('vRoutA').hasError('pattern'))">
+          <p>{{ showErrMsg('vRoutA') }}</p>
         </div>
-        </div>
-        </form>
+      </div>
+
+  <div>
+    <button
+      mat-raised-button
+      color="primary"
+      magic="pbRoutA"
+      class="pbRoutAProps"
+    >
+      Say Hi
+    </button>
+  </div>
+  </div>
+</form>
