@@ -8,14 +8,11 @@
 @import "custom";
 
 
-magic-root
-{
-  display: flex;
-  flex:1
-}
 
 mga-startupprogram
 {
-  display: flex;
-  flex-direction: column;
+  @extend .app;
+  @extend .header-fixed;
+  @extend .sidebar-lg-show;
+  @extend .sidebar-fixed;
 }
