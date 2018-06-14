@@ -59,6 +59,13 @@ export const routes: Routes = [
       title: 'Register Page'
     }
   },
+  {
+    path: '**',
+    component: P404Component,
+    data: {
+      title: 'Page 404'
+    }
+  },
 ];
 
 @NgModule({
